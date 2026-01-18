@@ -12,7 +12,7 @@ interface Shop {
 }
 
 const s: Shop = {id: 1, name: "cafe"}
-s.id = 2 //error
+// s.id = 2 //error
 
 interface DiscountCalculator {
   (price: number): number; // method inside interfaces

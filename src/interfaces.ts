@@ -90,6 +90,6 @@ interface point2D {
   y: number
 }
 
-const point1: point2D = { x: 1, y: 3, name: "Parth", age: 20} // gives an error - Object literal may only specify known properties, and 'name' does not exist in type 'point2D'
+// const point1: point2D = { x: 1, y: 3, name: "Parth", age: 20} // gives an error - Object literal may only specify known properties, and 'name' does not exist in type 'point2D'
 
-const point2: point2D = point1; // this doesn't give an error
+// const point2: point2D = point1; // this doesn't give an error

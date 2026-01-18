@@ -87,6 +87,15 @@ function makeMomo(item) {
             break;
     }
 }
-makeMomo({ filling: "paneer", category: "veg" });
+makeMomo({ filling: "chicken", category: "non-veg" });
+// type guarding on the basis of the property name
+function eat(item) {
+    if ("filling" in item) {
+        /// do some work
+    }
+}
 export {};
+//unknown type
+// function isStringArray ( arr: unknown ): arr is string[]  { // before calling, construct or access the values of an unknown data , we should tell us the DT beforehand
+// }
 //# sourceMappingURL=typeNarrowing.js.map

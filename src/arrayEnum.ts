@@ -14,7 +14,7 @@ const menu: Pizza[] = [
 ];
 
 const cities: readonly string[] = ["Delhi", "Jaipur", "Pune"];
-cities.push("Dehradun"); // error
+// cities.push("Dehradun"); // error
 
 const table: number[][] = [
   [1,2,3],
@@ -25,7 +25,7 @@ const table: number[][] = [
 
 let TupleType: [string, number];
 TupleType = ["anva", 24];
-TupleType = [20, "fwie"] //error
+// TupleType = [20, "fwie"] //error
 
 //named tuples
 
@@ -57,7 +57,7 @@ function makePizza ( type: PizzaType ) {
 }
 
 makePizza(PizzaType.CORN)
-makePizza("corn") // error
+// makePizza("corn") // error
 
 enum Random {
   id = 1,
