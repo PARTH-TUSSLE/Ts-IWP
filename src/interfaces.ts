@@ -84,3 +84,12 @@ abstract class People2 {
 }
 
 // Types are almost similar to interfaces, but they allow intersections(&) and unions(|) which interfaces don't
+
+interface point2D {
+  x: number,
+  y: number
+}
+
+const point1: point2D = { x: 1, y: 3, name: "Parth", age: 20} // gives an error - Object literal may only specify known properties, and 'name' does not exist in type 'point2D'
+
+const point2: point2D = point1; // this doesn't give an error
