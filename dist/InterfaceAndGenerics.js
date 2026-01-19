@@ -44,5 +44,25 @@ const response = {
         flavour: "grape"
     }
 };
+const func = (n) => {
+    return n;
+};
+const random = (p1, p2) => {
+    return { p1, p2 };
+};
+random({ name: "Parth", age: 20 }, { name: "Parth", age: 20, email: "abc@gmail.com" });
+const users = [
+    { name: "Parth", age: 20 },
+    { name: "Parth", age: 21 },
+    { name: "Shivang", age: 20 },
+    { name: "Krish", age: 21 },
+    { name: "Kanav", age: 19 },
+    { name: "Shivang", age: 19 },
+];
+const filterFromUsers = (arr, key, value) => {
+    return arr.filter((user) => user[key] === value);
+};
+const filterByName = filterFromUsers(users, "name", "Parth");
+console.log(filterByName);
 export {};
 //# sourceMappingURL=InterfaceAndGenerics.js.map

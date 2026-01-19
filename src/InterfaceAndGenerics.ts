@@ -119,3 +119,59 @@ const response: ApiPromise<{flavour: string}> = {
   }
 }
 
+const func =<CustomType> (n : CustomType): CustomType => {
+  return n;
+}
+
+type Person = {
+  name: string,
+  age: number
+}
+
+type Person2 = {
+  name: string;
+  age: number;
+  email: string;
+};
+
+const random = <T, U extends Person >( p1: T, p2: U ): {p1: T, p2: U} => {
+  return { p1, p2 };
+}
+
+random<Person, Person2>({ name: "Parth", age: 20 }, { name: "Parth", age: 20, email: "abc@gmail.com" });
+
+
+type User2 = {
+  name: string;
+  age: number;
+};
+
+const users: User2[] = [
+  { name: "Parth", age: 20 },
+  { name: "Parth", age: 21 },
+  { name: "Shivang", age: 20 },
+  { name: "Krish", age: 21 },
+  { name: "Kanav", age: 19 },
+  { name: "Shivang", age: 19 },
+];
+
+const filterFromUsers = <T, U extends keyof T>(
+  arr: T[],
+  key: U,
+  value: T[U],
+): T[] => {
+  return arr.filter((user) => user[key] === value);
+};
+
+const filterByName = filterFromUsers(users, "name", "Parth");
+console.log(filterByName);
+
+const filterByAge = filterFromUsers(users, "age", 23);
+console.log(filterByAge);
+
+const filterByName2 = filterFromUsers(users, "name", "Shivang");
+console.log(filterByName2);
+
+console.log(filterFromUsers(users, "age", 19));
+
+
